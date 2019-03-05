@@ -1,8 +1,6 @@
 {  
    "swagger":"2.0",
    "info": {  
-      "version": "v1.1",
-      "title": "REACT",
       "x-logo": {
          "url": "https://docs.sorted.com/react/api/images/logo.svg",
          "backgroundColor": "#F7F7F7",
