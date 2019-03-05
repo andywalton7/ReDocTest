@@ -5,7 +5,7 @@
       "title": "REACT",
       "x-logo": {
          "url": "https://raw.githubusercontent.com/andywalton7/ReDocTest/master/download.svg",
-         "backgroundColor": "#F7F7F7",
+         "backgroundColor": "#404040",
          "altText": "REACT logo"
       }
    },
