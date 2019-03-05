@@ -4,9 +4,9 @@
       "version": "v1.1",
       "title": "REACT",
       "x-logo": {
-         "url": "https://rebilly.github.io/ReDoc/petstore-logo.png",
+         "url": "https://docs.sorted.com/react/api/images/logo.svg",
          "backgroundColor": "#FFFFFF",
-         "altText": "Petstore logo"
+         "altText": "REACT logo"
       }
    },
    "host": "react-api-qa.sorted.com",
