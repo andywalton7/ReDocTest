@@ -1,9 +1,9 @@
 {  
    "swagger":"2.0",
-   "info":{  
-      "version":"v1.1",
-      "title":"REACT",
-      "x-logo":{
+   "info": {  
+      "version": "v1.1",
+      "title": "REACT",
+      "x-logo": {
          "url": "https://rebilly.github.io/ReDoc/petstore-logo.png",
          "backgroundColor": "#FFFFFF",
          "altText": "Petstore logo"
