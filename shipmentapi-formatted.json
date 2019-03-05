@@ -3,7 +3,7 @@
    "info":{  
       "version":"v1.1",
       "title":"REACT"
-      "x-logo": {
+      "x-logo":{
          "url": "https://rebilly.github.io/ReDoc/petstore-logo.png",
          "backgroundColor": "#FFFFFF",
          "altText": "Petstore logo"
