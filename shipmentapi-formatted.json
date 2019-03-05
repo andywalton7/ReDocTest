@@ -3,6 +3,11 @@
    "info":{  
       "version":"v1.1",
       "title":"REACT"
+      "x-logo": {
+         "url": "https://rebilly.github.io/ReDoc/petstore-logo.png",
+         "backgroundColor": "#FFFFFF",
+         "altText": "Petstore logo"
+      }
    },
    "host": "react-api-qa.sorted.com",
    "basePath": "/react/shipments",
