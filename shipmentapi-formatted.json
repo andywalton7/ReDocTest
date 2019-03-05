@@ -4,7 +4,7 @@
       "version": "v1.1",
       "title": "REACT",
       "x-logo": {
-         "url": "https://docs.sorted.com/react/api/images/logo.svg",
+         "url": "https://raw.githubusercontent.com/andywalton7/ReDocTest/master/download.svg",
          "backgroundColor": "#F7F7F7",
          "altText": "REACT logo"
       }
