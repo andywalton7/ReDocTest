@@ -11,7 +11,7 @@
    },
    "host": "react-api-qa.sorted.com",
    "basePath": "/react/shipments",
-   "schemes": ["https","http"],
+   "schemes": ["https"],
    "paths":{  
       "/":{  
          "post":{  
