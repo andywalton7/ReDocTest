@@ -1,7 +1,7 @@
 {  
    "swagger":"2.0",
    "info": {
-      "version": "v1.1",
+      description: "This is the API reference for REACT. To query any of the APIs, you’ll need an API key. You can create one from the **Settings > API Keys** tab on the REACT Dashboard. You’ll also need to make sure your 'accept' and 'content-type headers' are set to application/json, as REACT only works with JSON data. For more information on integrating with REACT, see the [integration guide](https://docs.sorted.com/react/registering-shipments/). "
       "title": "REACT",
       "x-logo": {
          "url": "https://sorted.com/media/1595/sortedreact-white.svg",
