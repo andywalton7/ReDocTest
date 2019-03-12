@@ -82,10 +82,13 @@
             ],
             "responses":{  
                "200":{  
-                  "description":"A shipment object was retruend successfully",
+                  "description":"A shipment object was returned successfully",
                   "schema":{  
                      "$ref":"#/definitions/Sorted.React.Shipment.Api.DataContracts.Public.Inbound.RegisterShipmentRequest"
                   }
+               },   
+               "400":{
+                  "description":"Error",
                }
             }
          },
