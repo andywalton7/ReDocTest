@@ -1,7 +1,7 @@
 {  
    "swagger":"2.0",
    "info": {
-      "description": "This is the API reference for REACT. <br/><br/>To query any of the APIs, you’ll need an API key. You can create one from the **Settings > API Keys** tab on the REACT Dashboard. You’ll also need to make sure your 'accept' and 'content-type headers' are set to application/json, as REACT only works with JSON data. <br/><br/>For more information on integrating with REACT, see the [integration guide](https://docs.sorted.com/react/registering-shipments/). ",
+      "description": "Welcome to the REACT API reference. <br/><br/>To query any of the APIs, you’ll need an API key. You can create one from the **Settings > API Keys** tab on the REACT Dashboard. You’ll also need to make sure your 'accept' and 'content-type headers' are set to application/json, as REACT only works with JSON data. <br/><br/>For more information on integrating with REACT, see the [integration guide](https://docs.sorted.com/react/registering-shipments/). ",
       "version": "1.1",
       "title": "REACT",
       "x-logo": {
@@ -12,6 +12,16 @@
    },
    "host": "react-api-qa.sorted.com",
    "basePath": "/react/shipments",
+   "tags": [
+    {
+      "name": "Shipments API",
+      "description": "Enables you to register shipments for tracking in REACT, and to manage your shipments once they're registered.",
+      "externalDocs": {
+        "description": "Find out more",
+        "url": "https://docs.sorted.com/react/"
+      }
+    }
+   ],
    "schemes": ["https"],
    "paths":{  
       "/":{  
