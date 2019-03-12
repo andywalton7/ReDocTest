@@ -82,7 +82,10 @@
             ],
             "responses":{  
                "200":{  
-                  "description":"Success"
+                  "description":"A shipment object was retruend successfully"
+                  "schema":{  
+                     "$ref":"#/definitions/Sorted.React.Shipment.Api.DataContracts.Public.Inbound.RegisterShipmentRequest"
+                  }
                }
             }
          },
