@@ -365,6 +365,7 @@ definitions:
     properties:
       tracking_references:
         description: The carrier's reference for this shipment.
+        required: true
         uniqueItems: false
         type: array
         items:
