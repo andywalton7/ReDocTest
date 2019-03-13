@@ -26,11 +26,9 @@ paths:
       description: Register one or more shipments for tracking in Sorted.REACT.
       operationId: Post
       consumes:
-        - application/json-patch+json
         - application/json
-        - text/json
-        - application/*+json
-      produces: []
+      produces:
+        - application/json
       parameters:
         - name: request
           in: body
