@@ -1,8 +1,8 @@
 swagger: '2.0'
 info:
-  description: 'Welcome to the REACT API reference. <br/><br/>To query any of the APIs, you’ll need an API key. You can create one from the **Settings > API Keys** tab on the REACT Dashboard. You’ll also need to make sure your ''accept'' and ''content-type headers'' are set to application/json, as REACT only works with JSON data. <br/><br/>For more information on integrating with REACT, see the [integration guide](https://docs.sorted.com/react/registering-shipments/). '
+  description: 'Welcome to the REACT API reference. For more information on integrating with REACT, see the [integration guide](https://docs.sorted.com/react/registering-shipments/). '
   version: '1.1'
-  title: REACT
+  title: REACT API Reference
   x-logo:
     url: 'https://docs.sorted.com/react/api/images/logo.svg'
     backgroundColor: '#fff'
@@ -441,6 +441,6 @@ securityDefinitions:
     name: x-api-key
     in: header
     type: apiKey
-    description: Please enter your Api Key into field
+    description: To query any of REACT's APIs, you’ll need an API key. You can create one from the **Settings > API Keys** tab on the REACT Dashboard. To use your key, add it in an `x-api-key` header to any reqests you make.
 security:
   - x-api-key: []
