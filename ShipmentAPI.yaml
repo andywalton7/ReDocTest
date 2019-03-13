@@ -67,10 +67,7 @@ paths:
       description: Update the details of a shipment.
       operationId: ByIdPut
       consumes:
-        - application/json-patch+json
         - application/json
-        - text/json
-        - application/*+json
       produces: []
       parameters:
         - name: id
@@ -108,8 +105,10 @@ paths:
       summary: Get Shipment
       description: Returns shipments matching the provided query string parameters.
       operationId: SearchGet
-      consumes: []
-      produces: []
+      consumes:
+        - application/json
+      produces:
+        - application/json
       parameters:
         - name: tracking_references
           in: query
