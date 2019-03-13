@@ -364,7 +364,7 @@ definitions:
         items:
           $ref: '#/definitions/Sorted.React.Shipment.Api.DataContracts.Public.Inbound.Shipment'
   Sorted.React.Shipment.Api.DataContracts.Public.Inbound.Shipment:
-    type: object
+
     properties:
       tracking_references:
         uniqueItems: false
@@ -418,6 +418,7 @@ definitions:
           - drop_off_pick_up
           - return_drop_off
         type: string
+    type: object    
   Sorted.React.Shipment.Api.DataContracts.Public.Inbound.Consumer:
     type: object
     properties:
