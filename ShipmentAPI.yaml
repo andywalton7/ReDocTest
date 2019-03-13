@@ -33,68 +33,7 @@ paths:
           in: body
           required: false
           schema:
-            $ref: '#/definitions/Sorted.React.Shipment.Api.DataContracts.Public.Inbound.RegisterShipmentRequest'
-      responses:
-        '200':
-          description: Success
-  '/{id}':
-    get:
-      tags:
-        - Shipments API
-      summary: Get Shipment by Shipment ID
-      description: Retrieve the details of the specified shipment.
-      operationId: ByIdGet
-      consumes:
-        - application/json
-      produces:
-        - application/json
-      parameters:
-        - name: id
-          in: path
-          required: true
-          type: string
-      responses:
-        '200':
-          description: A shipment object was returned successfully
-          schema:
-            $ref: '#/definitions/Sorted.React.Shipment.Api.DataContracts.Public.Inbound.Shipment'
-        '400':
-          description: Error
-    put:
-      tags:
-        - Shipments API
-      summary: Update Shipment
-      description: Update the details of a shipment.
-      operationId: ByIdPut
-      consumes:
-        - application/json
-      produces: []
-      parameters:
-        - name: id
-          in: path
-          required: true
-          type: string
-        - name: shipment
-          in: body
-          required: false
-          schema:
-            $ref: '#/definitions/Sorted.React.Shipment.Api.DataContracts.Public.Inbound.Shipment'
-      responses:
-        '200':
-          description: Success
-    delete:
-      tags:
-        - Shipments API
-      summary: Delete Shipment
-      description: Delete the specified shipment.
-      operationId: ByIdDelete
-      consumes: []
-      produces: []
-      parameters:
-        - name: id
-          in: path
-          required: true
-          type: string
+            $ref: '#/definitions/RegisterShipmentRequest'
       responses:
         '200':
           description: Success
@@ -133,6 +72,67 @@ paths:
           format: int32
       responses:
         '200':
+          description: A shipment object was returned successfully
+          schema:
+            $ref: '#/definitions/Shipment'   
+  '/{id}':
+    get:
+      tags:
+        - Shipments API
+      summary: Get Shipment by Shipment ID
+      description: Retrieve the details of the specified shipment.
+      operationId: ByIdGet
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - name: id
+          in: path
+          required: true
+          type: string
+      responses:
+        '200':
+          description: A shipment object was returned successfully
+          schema:
+            $ref: '#/definitions/Shipment'
+    put:
+      tags:
+        - Shipments API
+      summary: Update Shipment
+      description: Update the details of a shipment.
+      operationId: ByIdPut
+      consumes:
+        - application/json
+      produces: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          type: string
+        - name: shipment
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/Shipment'
+      responses:
+        '200':
+          description: Success
+    delete:
+      tags:
+        - Shipments API
+      summary: Delete Shipment
+      description: Delete the specified shipment.
+      operationId: ByIdDelete
+      consumes: []
+      produces: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          type: string
+      responses:
+        '200':
           description: Success
 definitions:
   Sorted.React.Shipment.Api.DataContracts.Internal.Inbound.Shipment:
@@ -151,19 +151,19 @@ definitions:
         format: date-time
         type: string
       promised_date:
-        $ref: '#/definitions/Sorted.React.Shipment.Api.DataContracts.Public.Inbound.PromisedDate'
+        $ref: '#/definitions/PromisedDate'
       expected_delivery_date:
-        $ref: '#/definitions/Sorted.React.Shipment.Api.DataContracts.Public.Inbound.ExpectedDeliveryDate'
+        $ref: '#/definitions/ExpectedDeliveryDate'
       addresses:
         uniqueItems: false
         type: array
         items:
-          $ref: '#/definitions/Sorted.React.Shipment.Api.DataContracts.Public.Inbound.Address'
+          $ref: '#/definitions/Address'
       metadata:
         uniqueItems: false
         type: array
         items:
-          $ref: '#/definitions/Sorted.React.Shipment.Api.DataContracts.Public.Inbound.Metadata'
+          $ref: '#/definitions/Metadata'
       shipment_type:
         enum:
           - delivery
@@ -197,7 +197,7 @@ definitions:
         type: string
       shipment_state:
         $ref: '#/definitions/Sorted.React.Shipment.Api.DataContracts.Internal.Inbound.ShipmentState'
-  Sorted.React.Shipment.Api.DataContracts.Public.Inbound.PromisedDate:
+  PromisedDate:
     type: object
     properties:
       start:
@@ -206,7 +206,7 @@ definitions:
       end:
         format: date-time
         type: string
-  Sorted.React.Shipment.Api.DataContracts.Public.Inbound.ExpectedDeliveryDate:
+  ExpectedDeliveryDate:
     type: object
     properties:
       start:
@@ -215,7 +215,7 @@ definitions:
       end:
         format: date-time
         type: string
-  Sorted.React.Shipment.Api.DataContracts.Public.Inbound.Address:
+  Address:
     type: object
     properties:
       address_type:
@@ -250,10 +250,10 @@ definitions:
       country_iso_code:
         type: string
       lat_long:
-        $ref: '#/definitions/Sorted.React.Shipment.Api.DataContracts.Public.Inbound.LatLong'
+        $ref: '#/definitions/LatLong'
       external_references:
-        $ref: '#/definitions/Sorted.React.Shipment.Api.DataContracts.Public.Inbound.ExternalAddressReference'
-  Sorted.React.Shipment.Api.DataContracts.Public.Inbound.Metadata:
+        $ref: '#/definitions/ExternalAddressReference'
+  Metadata:
     type: object
     properties:
       key:
@@ -337,7 +337,7 @@ definitions:
           - may_be_missing
           - unable_to_track
         type: string
-  Sorted.React.Shipment.Api.DataContracts.Public.Inbound.LatLong:
+  LatLong:
     type: object
     properties:
       latitude:
@@ -346,22 +346,22 @@ definitions:
       longitude:
         format: double
         type: number
-  Sorted.React.Shipment.Api.DataContracts.Public.Inbound.ExternalAddressReference:
+  ExternalAddressReference:
     type: object
     properties:
       type:
         type: string
       value:
         type: string
-  Sorted.React.Shipment.Api.DataContracts.Public.Inbound.RegisterShipmentRequest:
+  RegisterShipmentRequest:
     type: object
     properties:
       shipments:
         uniqueItems: false
         type: array
         items:
-          $ref: '#/definitions/Sorted.React.Shipment.Api.DataContracts.Public.Inbound.Shipment'
-  Sorted.React.Shipment.Api.DataContracts.Public.Inbound.Shipment:
+          $ref: '#/definitions/Shipment'
+  Shipment:
 
     properties:
       tracking_references:
@@ -390,21 +390,21 @@ definitions:
         format: date-time
         type: string
       promised_date:
-        $ref: '#/definitions/Sorted.React.Shipment.Api.DataContracts.Public.Inbound.PromisedDate'
+        $ref: '#/definitions/PromisedDate'
       expected_delivery_date:
-        $ref: '#/definitions/Sorted.React.Shipment.Api.DataContracts.Public.Inbound.ExpectedDeliveryDate'
+        $ref: '#/definitions/ExpectedDeliveryDate'
       addresses:
         uniqueItems: false
         type: array
         items:
-          $ref: '#/definitions/Sorted.React.Shipment.Api.DataContracts.Public.Inbound.Address'
+          $ref: '#/definitions/Address'
       consumer:
-        $ref: '#/definitions/Sorted.React.Shipment.Api.DataContracts.Public.Inbound.Consumer'
+        $ref: '#/definitions/Consumer'
       metadata:
         uniqueItems: false
         type: array
         items:
-          $ref: '#/definitions/Sorted.React.Shipment.Api.DataContracts.Public.Inbound.Metadata'
+          $ref: '#/definitions/Metadata'
       retailer:
         type: string
       shipment_type:
@@ -417,7 +417,7 @@ definitions:
           - return_drop_off
         type: string
     type: object    
-  Sorted.React.Shipment.Api.DataContracts.Public.Inbound.Consumer:
+  Consumer:
     type: object
     properties:
       reference:
