@@ -27,8 +27,7 @@ paths:
       operationId: Post
       consumes:
         - application/json
-      produces:
-        - application/json
+      produces: []
       parameters:
         - name: request
           in: body
@@ -45,8 +44,10 @@ paths:
       summary: Get Shipment by Shipment ID
       description: Retrieve the details of the specified shipment.
       operationId: ByIdGet
-      consumes: []
-      produces: []
+      consumes:
+        - application/json
+      produces:
+        - application/json
       parameters:
         - name: id
           in: path
