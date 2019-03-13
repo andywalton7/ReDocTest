@@ -84,7 +84,7 @@
                "200":{  
                   "description":"A shipment object was returned successfully",
                   "schema":{  
-                     "$ref":"#/definitions/Sorted.React.Shipment.Api.DataContracts.Public.Inbound.RegisterShipmentRequest"
+                     "$ref":"Sorted.React.Shipment.Api.DataContracts.Public.Inbound.Shipment"
                   }
                },   
                "400":{
