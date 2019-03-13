@@ -384,8 +384,8 @@ definitions:
       carrier:
         description: The name of the carrier of this shipment.
         type: string
-      carrier_service: The name of the carrier service of this shipment.
-        description:
+      carrier_service: 
+        description: The name of the carrier service of this shipment.
         type: string
       shipped_date:
         description: The date on which the shipment was (or will be) shipped.
