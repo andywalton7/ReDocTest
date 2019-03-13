@@ -4,8 +4,8 @@ info:
   version: '1.1'
   title: REACT
   x-logo:
-    url: 'https://sorted.com/media/1595/sortedreact-white.svg'
-    backgroundColor: '#696969'
+    url: 'https://docs.sorted.com/react/api/images/logo.svg'
+    backgroundColor: '#fff'
     altText: REACT logo
 host: react-api-qa.sorted.com
 basePath: /react/shipments
