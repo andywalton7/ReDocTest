@@ -362,10 +362,11 @@ definitions:
         items:
           $ref: '#/definitions/Shipment'
   Shipment:
+    required:
+      - tracking_references
     properties:
       tracking_references:
         description: The carrier's reference for this shipment.
-        required: true
         uniqueItems: false
         type: array
         items:
