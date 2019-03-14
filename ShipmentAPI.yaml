@@ -23,7 +23,7 @@ paths:
       tags:
         - Shipments API
       summary: Register Shipments
-      description: Register one or more shipments for tracking in Sorted.REACT.
+      description: The details of the shipment to be registered  
       operationId: Post
       consumes:
         - application/json
@@ -34,7 +34,6 @@ paths:
           required: false
           schema:
             $ref: '#/definitions/RegisterShipmentRequest'
-      description: The details of the shipment to be registered      
       responses:
         '200':
           description: Success
