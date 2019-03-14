@@ -91,6 +91,7 @@ paths:
           in: path
           required: true
           type: string
+          description: The ID set by Sorted.REACT for this shipment. Each shipment is assigned a unique ID.
       responses:
         '200':
           description: A shipment object was returned successfully
