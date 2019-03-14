@@ -57,6 +57,7 @@ paths:
             type: string
           collectionFormat: multi
           uniqueItems: false
+          description: The carrier's reference for this shipment
         - name: custom_references
           in: query
           required: false
@@ -65,11 +66,13 @@ paths:
             type: string
           collectionFormat: multi
           uniqueItems: false
+          description: A list of your own custom references for this shipment
         - name: page
           in: query
           required: false
           type: integer
           format: int32
+          description: The results page required
       responses:
         '200':
           description: A shipment object was returned successfully
@@ -111,11 +114,13 @@ paths:
           in: path
           required: true
           type: string
+          description: The ID set by Sorted.REACT for this shipment. Each shipment is assigned a unique ID.
         - name: shipment
           in: body
           required: false
           schema:
             $ref: '#/definitions/Shipment'
+          description: The updated shipment details
       responses:
         '200':
           description: Success
@@ -132,6 +137,7 @@ paths:
           in: path
           required: true
           type: string
+          description: The ID set by Sorted.REACT for this shipment. Each shipment is assigned a unique ID.
       responses:
         '200':
           description: Success
