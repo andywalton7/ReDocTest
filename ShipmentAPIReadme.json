@@ -105,7 +105,7 @@
             "description": "A shipment object was returned successfully",
             "examples": {
               "application/json": {
-                "hello": "world"
+                "hello": "test"
               }  
             }  
           }
