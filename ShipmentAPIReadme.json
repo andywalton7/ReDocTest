@@ -45,11 +45,6 @@
             "required": false,
             "schema": {
               "$ref": "#/definitions/RegisterShipmentRequest"  
-            },
-            "examples": {
-              "tracking_references": [
-                "TRK098JKH54ADD"
-              ]
             }
           }
         ],
@@ -745,7 +740,8 @@
           "type": "array",
           "items": {
             "type": "string"
-          }
+          },
+          "example": "QWERTYUIOP"
         },
         "custom_references": {
           "description": "A list of your own custom references for this shipment.",
