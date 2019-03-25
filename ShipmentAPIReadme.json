@@ -47,7 +47,9 @@
               "$ref": "#/definitions/RegisterShipmentRequest"  
             },
             "examples": {
-              "hello": "world"
+              "tracking_references": [
+                "TRK098JKH54ADD"
+              ]
             }
           }
         ],
