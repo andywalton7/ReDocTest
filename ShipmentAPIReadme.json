@@ -367,7 +367,7 @@
             "in": "body",
             "required": false,
             "schema": {
-              "$ref": "#/definitions/Shipment"
+              "$ref": "#/definitions/RegisterShipmentRequest"
             }
           }
         ],
