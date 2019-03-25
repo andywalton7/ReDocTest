@@ -352,7 +352,28 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "Success",
+            "examples": {
+              "application/json": {
+                "id": "sp_18446744073709551615",
+                "message": "Shipment record 'sp_18446744073709551615' with tracking reference ['TRK098JKH54ADD'] updated successfully.",
+                "tracking_references": [
+                  "TRK098JKH54ADD"
+                ],
+                "tags": [
+                  "BRAND_X",
+                  "Dewsbury_Hub",
+                  "Outerwear",
+                  "JAN_CAMPAIGN"
+                ],
+                "_links": [
+                  {
+                    "href": "https://api.sorted.com/react/shipment/sp_18446744073709551615",
+                    "rel": "self"
+                  }
+                ]
+              }
+            }    
           }
         }
       },
@@ -375,7 +396,16 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "Success",
+            "examples": {
+              "application/json": {
+                "id": "sp_18446744073709551615",
+                "message": "Shipment record 'sp_18446744073709551615' with tracking reference ['TRK098JKH54ADD'] deleted successfully.",
+                "tracking_references": [
+                  "TRK098JKH54ADD"
+                ]
+              }
+            }    
           }
         }
       }
