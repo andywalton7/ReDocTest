@@ -108,9 +108,6 @@
                 "hello": "world"
               }  
             }  
-            "schema": {
-              "$ref": "#/definitions/Shipment"
-            }
           }
         }
       }
