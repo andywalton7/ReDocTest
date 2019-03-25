@@ -226,9 +226,100 @@
         "responses": {
           "200": {
             "description": "A shipment object was returned successfully",
-            "schema": {
-              "$ref": "#/definitions/Shipment"
-            }
+            "examples": {
+              "application/json": {
+                "Shipment": {
+                  "properties": {
+                    "tracking_references": {
+                      "description": "The carrier's reference for this shipment.",
+                      "uniqueItems": false,
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "custom_references": {
+                      "description": "A list of your own custom references for this shipment.",
+                      "uniqueItems": false,
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "tags": {
+                      "description": "An optional list of tags to apply to this shipment.",
+                      "uniqueItems": false,
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "carrier": {
+                      "description": "The name of the carrier of this shipment.",
+                      "type": "string"
+                    },
+                    "carrier_service": {
+                      "description": "The name of the carrier service of this shipment.",
+                      "type": "string"
+                    },
+                    "shipped_date": {
+                      "description": "The date on which the shipment was (or will be) shipped.",
+                      "format": "date-time",
+                      "type": "string"
+                    },
+                    "order_date": {
+                      "description": "The date on which the order was placed.",
+                      "format": "date-time",
+                      "type": "string"
+                    },
+                    "promised_date": {
+                      "description": "The date range on which the shipment should have been delivered to the customer.",
+                      "$ref": "#/definitions/PromisedDate"
+                    },
+                    "expected_delivery_date": {
+                      "description": "The date and time during which delivery is expected.",
+                      "$ref": "#/definitions/ExpectedDeliveryDate"
+                    },
+                    "addresses": {
+                      "description": "The addresses relevant to a shipment. Each address includes a \"Type\" property indicating the type of address, should include only 1 address of each type (e.g. 1 origin and 1 destination).",
+                      "uniqueItems": false,
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/definitions/Address"
+                      }
+                    },
+                    "consumer": {
+                      "description": "The consumer that the shipment relates to.",
+                      "$ref": "#/definitions/Consumer"
+                    },
+                    "metadata": {
+                      "description": "Optional metadata about this shipment.",
+                      "uniqueItems": false,
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/definitions/Metadata"
+                      }
+                    },
+                    "retailer": {
+                      "description": "An identifier for the retailer for this shipment.",
+                      "type": "string"
+                    },
+                    "shipment_type": {
+                      "description": "A property indicating the type of shipment, e.g. \"delivery\", \"pick_up\", \"drop_off\".",
+                      "enum": [
+                        "delivery",
+                        "return",
+                        "pick_up",
+                        "drop_off",
+                        "drop_off_pick_up",
+                        "return_drop_off"
+                      ],
+                      "type": "string"
+                    }
+                  }
+                }  
+              }  
+            }  
           }
         }
       },
