@@ -44,7 +44,10 @@
             "in": "body",
             "required": false,
             "schema": {
-              "$ref": "#/definitions/RegisterShipmentRequest"
+              "$ref": "#/definitions/RegisterShipmentRequest"  
+            },
+            "examples": {
+              "hello": "world"
             }
           }
         ],
