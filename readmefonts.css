@@ -1,0 +1,15 @@
+@font-face {
+    font-family: "Circular Pro Book";
+    font-weight: normal;
+	font-style: normal;
+	src: url(https://github.com/andywalton7/ReDocTest/blob/master/lineto-circular-pro-book.eot?raw=true) format("embedded-opentype");
+	src: url(https://github.com/andywalton7/ReDocTest/blob/master/lineto-circular-pro-book.woff2?raw=true) format("woff2");
+	src: url(https://github.com/andywalton7/ReDocTest/blob/master/lineto-circular-pro-book.woff?raw=true) format("woff");
+  }
+  
+  @font-face {
+    font-family: "Circular Pro Black";
+    font-weight: bold;
+	font-style: normal;
+	src: url(https://github.com/andywalton7/ReDocTest/blob/master/lineto-circular-pro-black.woff2?raw=true) format("woff2");
+  }
