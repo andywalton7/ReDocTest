@@ -2796,7 +2796,7 @@
           },
           "custom_reference": {
             "type": "string",
-            "description": "custom_reference description",
+            "description": "custom_reference description U+000A validation info",
             "nullable": true
           },
           "message": {
