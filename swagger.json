@@ -2740,14 +2740,17 @@
         "properties": {
           "property": {
             "type": "string",
+            "description": "property description",
             "nullable": true
           },
           "message": {
             "type": "string",
+            "description": "message description",
             "nullable": true
           },
           "code": {
             "type": "string",
+            "description": "code description",
             "nullable": true
           }
         },
@@ -2783,23 +2786,28 @@
             "items": {
               "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.ApiErrorMessage"
             },
+            "description": "errors description",
             "nullable": true
           },
           "reference": {
             "type": "string",
+            "description": "reference description",
             "nullable": true
           },
           "custom_reference": {
             "type": "string",
+            "description": "custom_reference description",
             "nullable": true
           },
           "message": {
             "type": "string",
+            "description": "message description",
             "nullable": true
           },
           "version": {
             "type": "integer",
             "format": "int32",
+            "description": "version description",
             "nullable": true
           },
           "_links": {
@@ -2807,6 +2815,7 @@
             "items": {
               "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.Link"
             },
+            "description": "_links description",
             "nullable": true
           }
         },
