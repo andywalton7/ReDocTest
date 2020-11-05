@@ -2792,11 +2792,15 @@
           "reference": {
             "type": "string",
             "description": "reference description",
+            "maximum": 1,
+            "minimum": 1,
             "nullable": true
           },
           "custom_reference": {
             "type": "string",
             "description": "custom_reference description U+000A validation info",
+            "maximum": 1,
+            "minimum": 0,
             "nullable": true
           },
           "message": {
