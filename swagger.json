@@ -11,46 +11,46 @@
         "tags": [
           "Shipment Groups"
         ],
-        "summary": "Adds a shipment to the shipment group",
-        "description": "This endpoint allows you to add a shipment to a shipment_group.",
+        "summary": "summary",
+        "description": "description",
         "parameters": [
           {
-            "name": "customReference",
-            "in": "path",
-            "description": "The custom reference of the shipment_group to add the shipment to",
+            "name": "parameter name 1",
+            "in": "parameter path",
+            "description": "parameter description",
             "required": true,
             "schema": {
-              "type": "string",
-              "description": "The custom reference of the shipment_group to add the shipment to",
+              "type": "parameter schema type",
+              "description": "parameter schema description",
               "nullable": true
             }
           },
           {
-            "name": "shipmentReference",
-            "in": "path",
-            "description": "The reference of the shipment to add to the shipment_group",
+            "name": "parameter name 2",
+            "in": "parameter path",
+            "description": "parameter description",
             "required": true,
             "schema": {
-              "type": "string",
-              "description": "The reference of the shipment to add to the shipment_group",
+              "type": "parameter schema type",
+              "description": "parameter schema description",
               "nullable": true
             }
           },
           {
-            "name": "x-api-version",
-            "in": "header",
-            "description": "The version of the API to use",
+            "name": "parameter name 3",
+            "in": "parameter path",
+            "description": "parameter description",
             "required": true,
-            "style": "simple",
             "schema": {
-              "type": "string",
-              "description": "The version of the API to use"
+              "type": "parameter schema type",
+              "description": "parameter schema description",
+              "nullable": true
             }
           }
         ],
         "responses": {
           "200": {
-            "description": "The shipment_group has been updated successfully",
+            "description": "response description",
             "content": {
               "application/json": {
                 "schema": {
@@ -60,19 +60,19 @@
             }
           },
           "304": {
-            "description": "The shipment already exists in the shipment_group"
+            "description": "response description"
           },
           "400": {
-            "description": "There is a validation error in your request"
+            "description": "response description"
           },
           "403": {
-            "description": "You do not have permission to update a shipment_group"
+            "description": "response description"
           },
           "404": {
-            "description": "The shipment_group could not be found"
+            "description": "response description"
           },
           "409": {
-            "description": "The shipment_group is locked or is closed and cannot be updated"
+            "description": "response description"
           }
         }
       },
