@@ -2805,7 +2805,8 @@
           },
           "message": {
             "type": "string",
-            "description": "message description <br/> test validation info",
+            "description": "message description 
+                            <br/> 2nd test validation info",
             "maxItems": "n",
             "minItems": 1,
             "nullable": true
