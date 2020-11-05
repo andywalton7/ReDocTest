@@ -2805,7 +2805,8 @@
           },
           "message": {
             "type": "string",
-            "description": "message description",
+            "description": "message description
+                            U+000A validation info",
             "maxItems": "n",
             "minItems": 1,
             "nullable": true
