@@ -11,40 +11,40 @@
         "tags": [
           "Shipment Groups"
         ],
-        "summary": "summary",
-        "description": "description",
+        "summary": "Adds a shipment to the shipment group",
+        "description": "This endpoint allows you to add a shipment to a shipment_group.",
         "parameters": [
           {
-            "name": "parameter name 1",
-            "in": "parameter path",
-            "description": "parameter description",
+            "name": "customReference",
+            "in": "path",
+            "description": "The custom reference of the shipment_group to add the shipment to",
             "required": true,
             "schema": {
-              "type": "parameter schema type",
-              "description": "parameter schema description",
+              "type": "string",
+              "description": "The custom reference of the shipment_group to add the shipment to",
               "nullable": true
             }
           },
           {
-            "name": "parameter name 2",
-            "in": "parameter path",
-            "description": "parameter description",
+            "name": "shipmentReference",
+            "in": "path",
+            "description": "The reference of the shipment to add to the shipment_group",
             "required": true,
             "schema": {
-              "type": "parameter schema type",
-              "description": "parameter schema description",
+              "type": "string",
+              "description": "The reference of the shipment to add to the shipment_group",
               "nullable": true
             }
           },
           {
-            "name": "parameter name 3",
-            "in": "parameter path",
-            "description": "parameter description",
+            "name": "x-api-version",
+            "in": "header",
+            "description": "The version of the API to use",
             "required": true,
+            "style": "simple",
             "schema": {
-              "type": "parameter schema type",
-              "description": "parameter schema description",
-              "nullable": true
+              "type": "string",
+              "description": "The version of the API to use"
             }
           }
         ],
@@ -2798,7 +2798,7 @@
           },
           "custom_reference": {
             "type": "string",
-            "description": "custom_reference description U+000A validation info",
+            "description": "custom_reference description validation info",
             "maxItems": 1,
             "minItems": 0,
             "nullable": true
