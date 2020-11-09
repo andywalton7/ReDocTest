@@ -11,8 +11,8 @@
         "tags": [
           "Shipment Groups"
         ],
-        "summary": "Adds a shipment to the shipment group",
-        "description": "This endpoint allows you to add a shipment to a shipment_group.",
+        "summary": "Add Shipment to Group",
+        "description": "This endpoint provides the simplest possible method of adding a single shipment to an existing shipment_group.",
         "parameters": [
           {
             "name": "customReference",
@@ -2786,7 +2786,9 @@
             "items": {
               "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.ApiErrorMessage"
             },
-            "description": "errors description",
+            "description": "Any error(s) relating to the operation",
+            "maxItems": 0,
+            "minItems": "n",
             "nullable": true
           },
           "reference": {
