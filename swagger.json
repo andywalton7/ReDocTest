@@ -50,7 +50,7 @@
         ],
         "responses": {
           "200": {
-            "description": "response description",
+            "description": "Returned when the request was successful. The shipment_group has been updated successfully.",
             "content": {
               "application/json": {
                 "schema": {
